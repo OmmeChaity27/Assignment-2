@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechWave Podcast</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap'); */
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #10011f;
+        }
+
+        .bg-hero {
+            background-image: url('assets/hero-bg.png');
+            background-size: 100% auto;
+            background-position: top;
+            background-repeat: no-repeat;
+        }
+
+        .bg-footer {
+            background-image: url('assets/footer-bg.png');
+            background-size: 100% auto;
+            background-position: bottom;
+            background-repeat: no-repeat;
+        }
+
+        .gradient-border {
+            border: 1px solid;
+            border-image: linear-gradient(45deg, #fce043, #fb7185, #d946ef) 1;
+        }
+
+        .gradient-bg {
+            background: linear-gradient(45deg, #fce043, #fb7185, #d946ef);
+        }
+
+        .text-gradient {
+            background: linear-gradient(45deg, #fce043, #fb7185, #d946ef);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        #menu-toggle:checked~#nav-menu {
+            display: flex;
+        }
+    </style>
+</head>
+
+<body class="text-white">
+
+    <nav class="flex items-center justify-between px-6 py-6 lg:px-32 max-w-[1440px] mx-auto relative z-50">
+        <div class="text-3xl font-black ">Tech<span class="text-gradient">Wave</span></div>
+
+        <input type="checkbox" id="menu-toggle" class="hidden">
+        <label for="menu-toggle" class="lg:hidden cursor-pointer">
+            <img src="assets/hamburger-menu.png" alt="Menu" class="w-6 h-6">
+        </label>
+
+        <ul id="nav-menu"
+            class="hidden absolute lg:static top-full left-0 w-full lg:w-auto flex-col lg:flex lg:flex-row items-center gap-8 bg-[#110121] lg:bg-transparent py-10 lg:py-0">
+            <li><a href="#" class="text-gray-300 hover:text-white">About</a></li>
+            <li><a href="#" class="text-gray-300 hover:text-white">Episodes</a></li>
+            <li><a href="#" class="text-gray-300 hover:text-white">Host</a></li>
+        </ul>
+
+        <button
+            class="gradient-bg px-6 py-2 rounded-full font-bold text-xs uppercase tracking-widest hidden lg:block">Subscribe
+        </button>
+    </nav>
+
+
+</body>
+
+</html>
